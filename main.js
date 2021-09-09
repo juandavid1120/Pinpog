@@ -63,8 +63,15 @@
     this.speed_y = this.speed * -Math.sin(this.bounce_angle);
     this.speed_x = this.speed * Math.cos(this.bounce_angle);
 
-    if (this.x > (this.board.width / 2)) this.direction = -1;
-    else this.direction = 1;
+    if (this.x > (this.board.width / 2)){
+      this.direction = -1;
+      this.speed+=1;
+    }else
+    {
+      this.direction = 1;     
+      this.speed+=1;
+      
+    } 
 
    }
 
